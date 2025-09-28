@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VahanBazar</title>
+  </head>
+<body>
+  <div class="min-h-screen bg-slate-50 p-3 md:p-6">
+    <header class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold">VB</div>
+        <div>
+          <h1 class="text-lg font-bold">VahanBazar</h1>
+          <div class="text-xs text-muted">Browse bikes, scooters & EVs</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-4">
+        <a class="text-sm">Home</a>
+        <a class="text-sm">New Launches</a>
+        <a class="text-sm">Showrooms</a>
+        <a class="text-sm">Used Bikes</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button class="btn btn-ghost hidden md:inline">Sign in</button>
+        <button class="btn btn-primary">Sell Vehicle</button>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto mt-4 grid grid-cols-1 md:grid-cols-[280px,1fr] gap-4">
+      <aside class="p-4 bg-white/80 backdrop-blur-md rounded-lg shadow-sm w-full md:w-72">
+        <h3 class="font-semibold mb-3">Filters</h3>
+        <input aria-label="search" placeholder="Search model, brand, showroom" class="w-full mb-3 input placeholder-gray-400 p-2 rounded border">
+        <label class="block text-sm">Brand</label>
+        <select class="w-full mb-3 input p-2 rounded border">
+          <option value="All">All</option>
+          <option value="Aquila">Aquila</option>
+          <option value="Volt">Volt</option>
+          <option value="Sprint">Sprint</option>
+          <option value="EcoRider">EcoRider</option>
+        </select>
+        <label class="block text-sm">Fuel</label>
+        <select class="w-full mb-3 input p-2 rounded border">
+          <option value="All">All</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Electric">Electric</option>
+        </select>
+        <label class="block text-sm">Category</label>
+        <select class="w-full mb-3 input p-2 rounded border">
+          <option value="All">All</option>
+          <option value="bike">Bike</option>
+          <option value="scooter">Scooter</option>
+          <option value="EV">EV</option>
+        </select>
+        <label class="block text-sm">Price max (₹)</label>
+        <input type="range" min="0" max="300000">
+        <div class="text-xs mt-1">Up to ₹300,000</div>
+        <div class="mt-4 flex gap-2">
+          <button class="btn btn-primary flex-1">Reset</button>
+          <button class="btn">Top</button>
+        </div>
+      </aside>
+
+      <section>
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <div>
+            <h2 class="font-semibold">Discover vehicles</h2>
+            <div class="text-xs text-muted">4 results</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="btn btn-outline text-sm">Sort</button>
+            <button class="btn btn-outline text-sm hidden sm:inline">Map</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+            <div class="relative">
+              <img src="https://picsum.photos/seed/aquila/640/420" alt="Aquila X100" class="w-full h-44 object-cover">
+              <div class="absolute top-2 right-2 bg-white/90 rounded p-1 text-xs">₹95,000</div>
+            </div>
+            <div class="p-3 flex-1 flex flex-col">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold">Aquila X100</h4>
+                  <div class="text-xs text-muted">Aquila • Petrol • bike</div>
+                </div>
+                <div class="flex flex-col items-end gap-1">
+                  <label class="inline-flex items-center gap-2 text-xs">
+                    <input type="checkbox"> Compare
+                  </label>
+                  <button class="text-xs underline">Book Test Ride</button>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-muted space-y-1 flex-1">
+                <li><span class="font-medium text-sm capitalize">cc:</span> 110</li>
+                <li><span class="font-medium text-sm capitalize">power:</span> 8.5 PS</li>
+                <li><span class="font-medium text-sm capitalize">weight:</span> 110 kg</li>
+              </ul>
+              <div class="mt-3 flex items-center gap-2">
+                <button class="btn btn-outline flex-1">View Details</button>
+                <button class="btn btn-primary">Book</button>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+            <div class="relative">
+              <img src="https://picsum.photos/seed/volt/640/420" alt="Volt Glide E1" class="w-full h-44 object-cover">
+              <div class="absolute top-2 right-2 bg-white/90 rounded p-1 text-xs">₹120,000</div>
+            </div>
+            <div class="p-3 flex-1 flex flex-col">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold">Volt Glide E1</h4>
+                  <div class="text-xs text-muted">Volt • Electric • scooter</div>
+                </div>
+                <div class="flex flex-col items-end gap-1">
+                  <label class="inline-flex items-center gap-2 text-xs">
+                    <input type="checkbox"> Compare
+                  </label>
+                  <button class="text-xs underline">Book Test Ride</button>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-muted space-y-1 flex-1">
+                <li><span class="font-medium text-sm capitalize">battery:</span> 3.5 kWh</li>
+                <li><span class="font-medium text-sm capitalize">motor:</span> 3 kW</li>
+                <li>Range: 120 km</li>
+              </ul>
+              <div class="mt-3 flex items-center gap-2">
+                <button class="btn btn-outline flex-1">View Details</button>
+                <button class="btn btn-primary">Book</button>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+            <div class="relative">
+              <img src="https://picsum.photos/seed/sprint/640/420" alt="Sprint 125" class="w-full h-44 object-cover">
+              <div class="absolute top-2 right-2 bg-white/90 rounded p-1 text-xs">₹78,000</div>
+            </div>
+            <div class="p-3 flex-1 flex flex-col">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold">Sprint 125</h4>
+                  <div class="text-xs text-muted">Sprint • Petrol • scooter</div>
+                </div>
+                <div class="flex flex-col items-end gap-1">
+                  <label class="inline-flex items-center gap-2 text-xs">
+                    <input type="checkbox"> Compare
+                  </label>
+                  <button class="text-xs underline">Book Test Ride</button>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-muted space-y-1 flex-1">
+                <li><span class="font-medium text-sm capitalize">cc:</span> 125</li>
+                <li><span class="font-medium text-sm capitalize">power:</span> 9.2 PS</li>
+                <li class="text-xs text-amber-700">Used • 2019 • 12000 km</li>
+              </ul>
+              <div class="mt-3 flex items-center gap-2">
+                <button class="btn btn-outline flex-1">View Details</button>
+                <button class="btn btn-primary">Book</button>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+            <div class="relative">
+              <img src="https://picsum.photos/seed/ecorider/640/420" alt="EcoRider 250" class="w-full h-44 object-cover">
+              <div class="absolute top-2 right-2 bg-white/90 rounded p-1 text-xs">₹220,000</div>
+            </div>
+            <div class="p-3 flex-1 flex flex-col">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold">EcoRider 250</h4>
+                  <div class="text-xs text-muted">EcoRider • Petrol • bike</div>
+                </div>
+                <div class="flex flex-col items-end gap-1">
+                  <label class="inline-flex items-center gap-2 text-xs">
+                    <input type="checkbox"> Compare
+                  </label>
+                  <button class="text-xs underline">Book Test Ride</button>
+                </div>
+              </div>
+              <ul class="mt-3 text-sm text-muted space-y-1 flex-1">
+                <li><span class="font-medium text-sm capitalize">cc:</span> 250</li>
+                <li><span class="font-medium text-sm capitalize">power:</span> 20 PS</li>
+              </ul>
+              <div class="mt-3 flex items-center gap-2">
+                <button class="btn btn-outline flex-1">View Details</button>
+                <button class="btn btn-primary">Book</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-3 rounded shadow-sm">
+            <h5 class="font-semibold text-sm">EMI Calculator</h5>
+            <div class="mt-2 space-y-2">
+              <label class="text-xs">On-road Price (₹)</label>
+              <input type="number" value="100000" class="w-full input p-2 rounded border">
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="text-xs">Down Payment (₹)</label>
+                  <input type="number" value="20000" class="w-full input p-2 rounded border">
+                </div>
+                <div>
+                  <label class="text-xs">Rate % (annual)</label>
+                  <input type="number" value="8.5" class="w-full input p-2 rounded border">
+                </div>
+              </div>
+              <label class="text-xs">Tenure (months)</label>
+              <input type="number" value="36" class="w-full input p-2 rounded border">
+              <div class="mt-2 flex justify-between items-center">
+                <div class="text-sm">Estimated EMI</div>
+                <div class="font-semibold">₹2,538</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3 rounded shadow-sm">
+            <h5 class="font-semibold text-sm">Fuel / Energy Cost</h5>
+            <div class="mt-2 space-y-2">
+              <label class="text-xs">Type</label>
+              <select class="w-full input p-2 rounded border">
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Electric</option>
+              </select>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="text-xs">Mileage (km per L or km per kWh)</label>
+                  <input type="number" value="40" class="w-full input p-2 rounded border">
+                </div>
+                <div>
+                  <label class="text-xs">Price per unit (₹)</label>
+                  <input type="number" value="110" class="w-full input p-2 rounded border">
+                </div>
+              </div>
+              <label class="text-xs">Monthly km</label>
+              <input type="number" value="800" class="w-full input p-2 rounded border">
+              <div class="mt-2 flex justify-between items-center">
+                <div class="text-sm">Est. monthly cost</div>
+                <div class="font-semibold">₹2,200</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3 rounded shadow-sm">
+            <h5 class="font-semibold">Upcoming Launches</h5>
+            <ul class="mt-2 space-y-2 text-sm">
+              <li class="border p-2 rounded flex justify-between items-start">
+                <div>
+                  <div class="font-medium">Aquila X125 Launch</div>
+                  <div class="text-xs text-muted">New 125cc offering with modern features</div>
+                </div>
+                <div class="text-xs text-muted">2025-10-15</div>
+              </li>
+              <li class="border p-2 rounded flex justify-between items-start">
+                <div>
+                  <div class="font-medium">Volt Glide S</div>
+                  <div class="text-xs text-muted">Long-range EV scooter</div>
+                </div>
+                <div class="text-xs text-muted">2025-11-05</div>
+              </li>
+            </ul>
+            <div class="mt-3 text-right">
+              <button class="btn btn-ghost text-sm">View all</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold mb-3">Showrooms Nearby</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 bg-white rounded shadow-sm flex items-center justify-between">
+              <div>
+                <div class="font-medium">RidePoint Motors</div>
+                <div class="text-xs text-muted">RidePoint Motors, Chennai</div>
+              </div>
+              <div class="text-right">
+                <div class="text-sm">Open</div>
+                <button class="btn btn-sm mt-2">Book Visit</button>
+              </div>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm flex items-center justify-between">
+              <div>
+                <div class="font-medium">ElectroHub</div>
+                <div class="text-xs text-muted">ElectroHub, Bangalore</div>
+              </div>
+              <div class="text-right">
+                <div class="text-sm">Open</div>
+                <button class="btn btn-sm mt-2">Book Visit</button>
+              </div>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm flex items-center justify-between">
+              <div>
+                <div class="font-medium">UsedWheels</div>
+                <div class="text-xs text-muted">UsedWheels, Pune</div>
+              </div>
+              <div class="text-right">
+                <div class="text-sm">Open</div>
+                <button class="btn btn-sm mt-2">Book Visit</button>
+              </div>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm flex items-center justify-between">
+              <div>
+                <div class="font-medium">Highway Motors</div>
+                <div class="text-xs text-muted">Highway Motors, Delhi</div>
+              </div>
+              <div class="text-right">
+                <div class="text-sm">Open</div>
+                <button class="btn btn-sm mt-2">Book Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold mb-3">Used Bikes for sale</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 bg-white rounded shadow-sm flex gap-3">
+              <img src="https://picsum.photos/seed/sprint/640/420" alt="Sprint 125" class="w-28 h-20 object-cover rounded">
+              <div class="flex-1">
+                <div class="font-medium">Sprint 125</div>
+                <div class="text-xs text-muted">12000 km • Good</div>
+                <div class="mt-2 flex gap-2">
+                  <button class="btn btn-outline btn-sm">Contact</button>
+                  <button class="btn btn-primary btn-sm">Book Test Ride</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="max-w-7xl mx-auto mt-8 text-xs text-muted">© VahanBazar — Speedy marketplace demo • Mobile-first • Performance optimized</footer>
+    <nav class="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 border-t p-2 flex justify-around">
+      <button class="flex flex-col items-center text-xs"><span>🏠</span><span>Home</span></button>
+      <button class="flex flex-col items-center text-xs"><span>🔎</span><span>Search</span></button>
+      <button class="flex flex-col items-center text-xs"><span>🛒</span><span>Sell</span></button>
+      <button class="flex flex-col items-center text-xs"><span>👤</span><span>Account</span></button>
+    </nav>
+  </div>
+</body>
+</html>
